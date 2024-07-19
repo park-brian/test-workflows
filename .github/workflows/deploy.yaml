@@ -1,0 +1,14 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubunt-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - run: ls
+      
