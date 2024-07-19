@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - run: echo ${{ secrets.TEST_SECRET }} > .env
+      - run: echo "${{ secrets.TEST_SECRET }}" > .env
       - run: wc -l .env
       - run: ls
       
