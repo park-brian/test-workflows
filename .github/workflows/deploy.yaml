@@ -13,8 +13,7 @@ jobs:
       - run: echo "${{ secrets.TEST_SECRET }}" > .env
       - run: wc -l .env
       - run: ls
-    - name: Verify .env file
-      run: '[ "$(cat .env)" = "${{ secrets.TEST_SECRET }}" ] && echo "Verified" || echo "Verification failed"'      
+      - run: '[ "$(cat .env)" = "${{ secrets.TEST_SECRET }}" ] && echo "Verified" || echo "Verification failed"'      
       - uses: actions/upload-artifact@v4
         with:
           name: env
