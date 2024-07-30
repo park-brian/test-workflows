@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: echo "${{ secrets.TEST_SECRET }}" > .env
-      - run: echo "${{ github.ref	}}
+      - run: echo "${{ github.ref }}"
       - uses: actions/upload-artifact@v4
         with:
           name: env
